@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+body {
+    font-family: "Noto Sans KR", serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #3d3d3d;
+    line-height: 1.4;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+.spec {
+    background: url(../images/spec_bg.png) no-repeat center center / cover;
+    /*경로에 ../는 폴더 밖에 나가라는 명령
+    주의사항: ./와 /도 존재하며 의미가 다르므로 오타내면 안됨*/
+    height: 687px;
+    color: #ffffff;
+    text-align: center;
+}
+.spec h1 {
+    font-size: 45px;
+    font-weight: 900;
+    padding: 150px 0 0 0;
+}
