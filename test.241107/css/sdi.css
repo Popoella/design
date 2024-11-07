@@ -45,6 +45,11 @@ a {
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    /*하나의 요소에 width/height와 padding이
+    동시에 들어가면 넓이/높이가 늘어남
+    이걸 막는 코드
+    ---입력한 넓이/높이 내부로 여백이 들어가도록 수정*/
 }
 .wrapper {
     width: 1260px;
@@ -137,9 +142,38 @@ a {
     color: #3d3d3d;
     padding: 24px 224px;
 }
+.pass h1 {
+    font-size: 45px;
+    font-weight: 900;
+    color: #1d1d1d;
+    margin: 195px 0 21px 0;
+}
+.pass .list {
+    margin: 25px 0 25px 0;
+}
+.pass .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.pass .list ul li {
+    width: 404px;
+    height: 242px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 55px 0 0 40px;
+}
+.pass .list ul li strong {
+    color: #556ee8;
+}
+.pass .list ul li h2 {
+    font-size: 35px;
+    font-weight: 900;
+    color: #1d1d1d;
+    margin: 10px 0 20px 0;
 body {
     margin: 0 0 500px 0; 
 }
+
 
 
 
