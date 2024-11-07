@@ -38,6 +38,10 @@ h1, h2, h3, h4, h5, h6 {
 strong {
     font-weight: inherit;
 }
+a {
+    color: inherit;
+    text-decoration: none;
+}
 * {
     margin: 0;
     padding: 0;
@@ -71,7 +75,7 @@ strong {
     font-weight: 500;
     color: #999;
 }
-.color .list ul li h3 {
+.color .list ul li .code {
     font-size: 25px;
     font-weight: 500;
     color: #fff;
@@ -80,7 +84,62 @@ strong {
     padding: 34px 0 34px 32px;
     border-radius: 15px;
 }
-
+.color .list ul li .code.pan {
+    background-color: #0265ac;
+}
+.color .list ul li .code.c100 {
+    background-color: #034ea2;
+}
+.color .list ul li .code.r20 {
+    background-color: #1428a0;
+}
+.down h1 {
+    font-size: 45px;
+    font-weight: 900;
+    color: #1d1d1d;
+    margin: 195px 0 21px 0;    
+}
+.down .list {
+    margin: 39px 0 0 0;
+}
+.down .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.down .list ul li {
+    width: 614px;
+}
+.down .list ul li .photo {
+    border: 1px solid #ccc;
+    border-radius: 13px;
+    overflow: hidden;
+    line-height: 0;
+    font-size: 0;
+    /*이미지 하단에는 행간이 들어감. 이를 없애는 방법
+    감싸는 요소에 font-size:0; line-height:0;을 줘서
+    행간을 없애면 됨*/
+    /*영역 밖으로 나오는 이미지 안보이게 하기*/
+}
+.down .list ul li .photo img {
+    width: 100%;
+    /*감싸고 있는 photo의 넓이의 100%라는 이야기
+    ---넓이를 바꾸면 비율에 맞게 높이가 자동조절 됨
+    하나만 줄 것*/
+}
+.down .list ul li .more {
+    margin: 32px 0 0 0;
+}
+.down .list ul li .more a {
+    border: 1px solid #ccc;
+    border-radius: 13px;
+    display: block;
+    font-size: 25px;
+    color: #3d3d3d;
+    padding: 24px 224px;
+}
+body {
+    margin: 0 0 500px 0; 
+}
 
 
 
