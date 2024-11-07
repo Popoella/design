@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+body {
+    font-family: "Noto Sans KR", serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #3d3d3d;
+    line-height: 1.4;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;    
+}
+.brand {
+    background-color: #f4f4f4; 
+}
+.brand .photo {
+    padding: 29px 0 55px 0;
+    text-align: center;
+}
+.brand p {
+    text-align: center;
+}
+h1, h2, h3, h4, h5, h6 {
+    /*브라우저가 세팅해주는 기본값 말고 상속해주는 값으로 들어가라는 뜻*/
+    font-size: inherit;
+    font-weight: inherit;
+}
+strong {
+    /*strong태그는 기본적으로 글자가 두꺼움. em태그는 기본적으로 글자가 누워있음*/
+    font-weight: inherit;
+}
+a {/*a태그는 기본값이 파란색에 언더라인이 들어감 
+    색상은 상속받고, 밑줄은 없애기*/
+    color: inherit;
+    text-decoration: none;
+}
+.brand h1 {
+    font-size: 45px;
+    font-weight: 900;
+    color: #1d1d1d;
+    padding: 38px 0 16px 0;
+    text-align: center;
+}
+.basic h2 {
+    font-size: 45px;
+    font-weight: 900;
+    color: #1d1d1d;
+    margin: 44px 0 53px 0;
+}
+.basic p strong {
+    font-weight: 400;
+}
+.basic strong {
+    font-weight: 900;
+    color: #0e1b9b;
+}
+.basic h3 {
+    font-size: 35px;
+    font-weight: 900;
+    color: #1d1d1d;
+    margin: 0 0 24px 0;
+}
+.basic .photo2 {
+    margin: 35px 0 35px 0;
+}
+.basic .more {
+    text-align: center;
+    /*작은요소(inline요소)를 가운데 정렬하려면
+    넓이가 넓은 감싸는 요소에서 text-align:center를 줘야함
+    감싸는 요소의 넓이 안에서 좌우에 가운데에 함*/
+}
+.basic .more a {
+    background-color: #2f4277;
+    color: #fff;
+    padding: 16px 38px;
+    /*6자리가 같은 색상코드는 3자리만 써도 됨*/
+    display: inline-block;
+}
+.basic .link {
+    margin: 27px 0 123px 0;
+}
+.basic .link a {
+    color: #2f4277;
+    border: 1px solid #2f4277;
+    border-radius: 34px;
+    padding: 18px 40px;
+    display: inline-block;
+}
+
+
+
