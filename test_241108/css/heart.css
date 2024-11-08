@@ -66,6 +66,9 @@ li, ul ol {
     display:inline-block;*/
     border-radius: 50px;   
 }
+.story .tit .more a:hover {
+    background-color: #f40201;
+}
 .story .list {
     margin: 25px 0 0 0;
 }
