@@ -1,0 +1,244 @@
+@import url(default.css);/*default.css 이 문서에 복사해서 넣은 것처럼 불러오기*/
+@import url(font.css);
+@import url(common.css);
+
+.icon h2 {
+    font-size: 45px;
+    color: #1d1d1d;
+    font-weight: 700;
+    margin: 98px 0 17px 0;
+}
+.icon h3 {
+    color: #1d1d1d;
+    font-size: 35px;
+    font-weight: 700;
+    margin: 50px 0 17px 0;
+}
+/*위에 요소의 하단여백(margin)이 50px이고
+하단 요소의 상단여백(margin)이 100px이면
+둘 사이의 여백은 100px
+margin이 중복되면 둘 중에 큰 값만 적용 됨.*/
+
+.svg_img .more {
+    margin: 50px 0;
+}
+.svg_img .more a {
+    display: flex;
+    align-items: center;
+    width: 225px;
+    border: 1px solid #999;
+    padding: 10px 12px 10px 30px;
+    border-radius: 50px;
+    font-size: 25px;
+}
+.svg_img .more a strong {
+    margin-right: 20px;
+}
+.svg_img .list ul {
+    display: flex;
+}
+.svg_img .list ul li {
+    width: 100px;
+    margin-right: 10px;
+}
+.svg_img .list ul li a {
+    display: block;
+    text-align: center;
+}
+.svg_img .list ul li a .photo {
+    width: 70px;
+    height: 70px;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+    display: inline-block;
+    /*block요소는 text-aligncenter로 정렬불가
+    그럼 inline-block 주면 됨*/
+    padding-top: 21px;
+    margin-bottom: 34px;
+}
+
+.svg_bg .more {
+    margin: 50px 0px;
+}
+.svg_bg .more a {
+    display: inline-block;
+    border: 1px solid #999;
+    padding: 10px 80px 10px 30px;
+    border-radius: 50px;
+    font-size: 25px;
+    background: url(../images/more_icon.png) no-repeat right 25px top 8px;
+}
+.svg_bg .more a:hover {
+    border-color: #1a73e8;
+    background-color: #1a73e8;
+    color: #fff;
+    background-image: url(../images/more_icon_w.png);
+}
+.svg_bg .list ul {
+    display: flex;
+}
+.svg_bg .list ul li {
+    width: 100px;
+    margin-right: 10px;
+}
+.svg_bg .list ul li a {
+    display: block;
+    text-align: center;
+}
+.svg_bg .list ul li a i {
+    width: 70px;
+    height: 70px;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 34px;
+    /*모든 배경의 위치와 반복값은 같고 경로만 다르니까*/
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.svg_bg .list ul li.ico1 a i {
+    background-image: url(../images/link_icon1.png);
+}
+.svg_bg .list ul li.ico2 a i {
+    background-image: url(../images/link_icon2.png);
+}
+.svg_bg .list ul li.ico3 a i {
+    background-image: url(../images/link_icon3.png);
+}
+.svg_bg .list ul li.ico4 a i {
+    background-image: url(../images/link_icon4.png);
+}
+.svg_bg .list ul li.ico1 a:hover i {
+    background-color: #1a73e8;
+    background-image: url(../images/link_icon1_w.png);
+}
+.svg_bg .list ul li.ico2 a:hover i {
+    background-color: #1a73e8;
+    background-image: url(../images/link_icon2_w.png);
+}
+.svg_bg .list ul li.ico3 a:hover i {
+    background-color: #1a73e8;
+    background-image: url(../images/link_icon3_w.png);
+}
+.svg_bg .list ul li.ico4 a:hover i {
+    background-color: #1a73e8;
+    background-image: url(../images/link_icon4_w.png);
+}
+
+.svg_before .more {
+    margin: 50px 0px;
+}
+.svg_before .more a {
+    display: inline-block;
+    border: 1px solid #999;
+    padding: 10px 80px 10px 30px;
+    border-radius: 50px;
+    font-size: 25px;
+    position: relative; /*after 정렬의 기준점*/
+}
+.svg_before .more a::after {
+    content: "";
+    position: absolute;
+    right: 22px; /*아이콘의 위치 조정*/
+    top: 10px;
+    width: 38px;
+    height: 38px;
+    background: url(../images/more_icon.png) no-repeat center center;
+}
+.svg_before .more a:hover::after {
+    background-image: url(../images/more_icon_w.png);
+}
+.svg_before .more a:hover {
+    border-color: #1a73e8;
+    background-color: #1a73e8;
+    color: #fff;
+}
+.svg_before .list ul {
+    display: flex;
+}
+.svg_before .list ul li {
+    width: 100px;
+    margin-right: 10px;
+}
+.svg_before .list ul li a {
+    display: block;
+    text-align: center;
+    position: relative; /* before 정렬의 기준 */
+    padding-top: 85px;
+}
+/*a사이즈는 현재 100px인데 a:before가 70px이고 이걸 a안에 가운데 정렬을 하고 싶음
+1. left를 여백의 차/2만큼 줌(15px)
+2. left를 50%로 줘서 가운데에서 시작하고(50%) 넓이의 절반을 빼줌 
+    width : calc(50%-35px)
+3. left를 50%를 줘서 가운데에서 시작하고(50%) 
+    transform: translateX(-50%) 나의 넓이의 절반을 왼쪽으로 이동
+    ==>장점-넓이를 몰라도 줄 수가 있음*/
+.svg_before .list ul li a::before {
+    content: "";
+    position: absolute;
+    left: 50%; /*정렬의 기준이 되는 a를 기준으로 50%*/
+    transform: translateX(-50%); /*before의 넓이의 50%*/
+    top: 0;
+    width: 70px;
+    height: 70px;
+    background-color: #f4f4f4;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 50%;
+}
+.svg_before .list ul li.ico1 a::before {
+    background-image: url(../images/link_icon1.png);
+}
+.svg_before .list ul li.ico2 a::before {
+    background-image: url(../images/link_icon2.png);
+}
+.svg_before .list ul li.ico3 a::before {
+    background-image: url(../images/link_icon3.png);
+}
+.svg_before .list ul li.ico4 a::before {
+    background-image: url(../images/link_icon4.png);
+}
+.svg_before .list ul li a:hover::before {
+    background-color: #1a73e8;
+}
+.svg_before .list ul li.ico1 a:hover::before {
+    background-image: url(../images/link_icon1_w.png);
+}
+.svg_before .list ul li.ico2 a:hover::before {
+    background-image: url(../images/link_icon2_w.png);
+}
+.svg_before .list ul li.ico3 a:hover::before {
+    background-image: url(../images/link_icon3_w.png);
+}
+.svg_before .list ul li.ico4 a:hover::before {
+    background-image: url(../images/link_icon4_w.png);
+}
+.google .more {
+    margin: 50px 0;
+}
+.google .more a {
+    display: inline-block;
+    border: 1px solid #999;
+    padding: 10px 75px 10px 30px;
+    border-radius: 50px;
+    font-size: 25px;
+    position: relative;
+}
+.google .more a i {
+    font-size: 30px; /*구글아이콘은 크기를 font-size로 줌-넓이가 17px이면 font-size도 17px*/
+    color: #999;
+    position: absolute; /*a기준으로 정렬*/
+    right: 24px;
+    top: 12px;
+}
+.google .more a:hover {
+    border-color: #1a73e8;
+    background-color: #1a73e8;
+    color: #fff;
+}
+.google .more a:hover i {
+    color: #fff;
+}
+body {
+    margin-bottom: 500px;
+}

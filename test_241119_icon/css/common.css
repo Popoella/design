@@ -1,0 +1,15 @@
+body, html {
+    font-family: "Pretendard", sans-serif; /*sans-serif: 고딕서체*/
+    font-size: 17px;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.4;
+    letter-spacing: 0;
+    word-break: keep-all; /*단어별로 줄바꿈*/
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+/*디자인 파일에 레이아웃 그리드처럼 홈페이지에 영역 제한하고 브라우저에 가운데 정렬*/
+
