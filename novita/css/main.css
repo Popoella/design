@@ -1,0 +1,80 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common.css);
+
+.service .tit {
+    text-align: center;
+}
+.service .tit h1 {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #1d1d1d;
+    margin: 157px 0 4px 0;
+}
+.service .list ul {
+    display: flex;
+    margin-top: 49px;
+    width: 852px;
+    justify-content: center;
+}
+.service .list .inner {
+    margin: 27px 0 0 23px;
+    width: calc(100% - 48px);
+}
+.service .list ul li .photo1 img {
+    border-radius: 200px 200px 120px 0;
+}
+.service .list ul li h2 {
+    font-size: 20;
+    font-weight: 800;
+    color: #1d1d1d;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+.service .list ul li span {
+    font-size: 15px;
+    margin-top: 22px;
+    display: block;
+    position: relative;
+}
+
+
+.better .tit {
+    background: url(../images/better_bg.jpg) no-repeat center center;
+    margin-top: 124px;
+    text-align: center
+}
+.better .tit h1 {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #fff;
+    padding: 105px 0 4px 0;
+}
+.better .tit p {
+    color: #fff;
+}
+.better .tit .more a{
+    
+}
+
+
+
+
+
+
+body {
+    margin-bottom: 500px;
+}
+
+
+
+
+
+
+
+
+.wrap {
+    width: 1300px;
+}
