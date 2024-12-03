@@ -1,0 +1,216 @@
+@import url(default.css); 
+@import url(font.css);
+@import url(common.css);
+
+.introduce .photo {
+    margin-top: 137px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.introduce .photo.case1 { /*너비와 높이가 계속 바뀜-안잘리고 모두 보임(이미지 하단에 행간이 적용돼서 여백이 생기는 이를 삭제)img사이즈=photo사이즈*/
+    line-height: 0;
+    font-size: 0;
+}
+.introduce .photo.case1 img {
+    width: 100%;
+}
+.introduce .photo.case2 {/*넓이는 변경되지만 높이가 고정-이미지가 잘림, 높이와 넓이를 고정-넓이는 이미 block태그라서 100%*/
+    height: 419px;
+}
+.introduce .photo.case2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.introduce .group {
+    display: flex;
+    justify-content: space-between;
+    margin: 83px 0 137px 0; /*margin이 중첩되면 긴 것 하나만 적용됨*/
+}
+.introduce .group h2 {
+    font-size: 40px;
+    font-weight: 900;
+    color: #1d1d1d;
+}
+.introduce .group h2 span {
+    display: block;
+}
+.introduce .group p {
+    width: 618px;
+}
+.introduce .group p strong {
+    font-weight: 700;
+    color: #3d3d3d;
+}
+@media screen and (max-width:640px) {
+            .introduce .photo {
+                margin-top: 44px;
+                border-radius: 10px;
+            }
+            .introduce .photo.case2 {/*넓이는 변경되지만 높이가 고정-이미지가 잘림, 높이와 넓이를 고정-넓이는 이미 block태그라서 100%*/
+                height: 110px;
+            }
+            .introduce .group {
+                display: block; /*flex외에 다른 것 주면 됨*/    
+                justify-content: space-between; /*flex가 사라지면 알아서 적용 안 됨*/   
+                margin: 26px 0 44px 0;
+            }
+            .introduce .group h2 {
+                font-size: 22px;
+                margin-bottom: 18px;
+            }
+            .introduce .group h2 span {
+                display: inline;
+            }
+            .introduce .group h2 br {
+                display: none;
+            }
+            .introduce .group p {
+                font-size: 14px;
+                width: auto;
+            }
+}
+
+
+.news {
+    margin: 150px 0; /*두개만 쓰면 앞은 위아래, 뒤는 양옆*/
+}
+.news h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 0 0 9px 0;
+}
+.news .news_wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.news .news_wrap .notice {
+    width: 618px;
+    background-color: #f4f7fd;
+    padding: 38px 40px 0 40px;
+}
+.news .news_wrap .notice li {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.news .news_wrap .notice li:last-child {
+    border-bottom: none;
+}
+.news .news_wrap .notice h3 {
+    display: none;
+}
+.news .news_wrap .notice ul li a {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0 20px 0;
+}
+.news .news_wrap .notice ul li a strong {
+    color: #3d3d3d;
+    width: calc(100% - 122px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.news .news_wrap .notice ul li a:hover strong {
+    text-decoration: underline;
+    font-weight: 700;
+}
+.news .news_wrap .notice ul li a span {
+    font-size: 15px;
+}
+.news .news_wrap .gallery {
+    width: 594px;
+}
+.news .news_wrap .gallery h3 {
+    display: none;
+}
+.news .news_wrap .gallery ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.news .news_wrap .gallery ul li {
+    width: calc(50% - 12px);
+    /*감싸고 있는 ul의 넓이 기준
+    좌우 2개니까 50% - (여백의 총합/한줄에 들어가는 li갯수)*/
+}
+.news .news_wrap .gallery ul li a {
+    display: block;
+}
+.news .news_wrap .gallery ul li a .photo {
+    height: 165px;
+    overflow: hidden; /*photo영역 밖으로 img가 나가지 못하게 함*/
+}
+.news .news_wrap .gallery ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+}
+.news .news_wrap .gallery ul li a:hover .photo img {
+    transform: scale3d(1.2,1.2,1);
+}
+.news .news_wrap .gallery ul li a strong { /*strong태그는 inline-block이라서 margin 적용이 안됨*/
+    font-weight: 600;
+    line-height: 1.2;
+    color: #3d3d3d;
+    margin-top: 11px;
+    display: block;
+
+    /*한줄제한
+    1. 넓이가 있어야함(block태그)
+    2. white-space:nowrap으로 한줄로 만듦
+    3. overflow:hidden영역이 넘치면 잘라버림
+    4. 잘린 글자 뒤에 ...추가 text-overflow:ellipsis */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+@media screen and (max-width:640px) {
+                .news {
+                    margin: 75px 0; /*두개만 쓰면 앞은 위아래, 뒤는 양옆*/
+                }
+                .news h2 {
+                    font-size: 30px;
+                    margin: 0 0 14px 0;
+                }
+                .news .news_wrap {
+                    display: block;
+                }
+                .news .news_wrap .notice {
+                    width: auto;
+                    padding: 26px 20px 23px 20px; /*하단여백추가*/
+                }
+                .news .news_wrap .notice ul li a {
+                    padding: 8px 0 7px 0;
+                }
+                .news .news_wrap .notice ul li a strong {
+                    width: calc(100% - 165px);
+                    font-size: 14px;
+                }
+                .news .news_wrap .notice ul li a span {
+                    font-size: 11px;
+                }
+                .news .news_wrap .gallery {
+                    width: auto;
+                    margin-top: 28px;
+                }
+                .news .news_wrap .gallery ul {
+                    gap: 14px;
+                }
+                .news .news_wrap .gallery ul li {
+                    width: calc(50% - 8px);
+                    /*감싸고 있는 ul의 넓이 기준
+                    좌우 2개니까 50% - (여백의 총합/한줄에 들어가는 li갯수)*/
+                }
+                .news .news_wrap .gallery ul li a .photo {
+                    height: 100px;
+                }
+                .news .news_wrap .gallery ul li a strong { /*strong태그는 inline-block이라서 margin 적용이 안됨*/
+                    font-size: 14px;
+                    margin-top: 6%;
+                    /*한줄제한->무제한*/
+                    overflow: visible; /*높이가 있어야 잘림*/
+                    white-space: normal;
+                }
+}/*media*/
