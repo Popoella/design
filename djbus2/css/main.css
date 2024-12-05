@@ -169,7 +169,9 @@ header .gnb .gnb_wrap ul li a:hover span::after {
     object-fit: cover;
 }
 
-
+body {
+    background-color: pink;
+}
 
 footer {
     margin-top: 500px;
