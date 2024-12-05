@@ -24,6 +24,10 @@ body, html {
 }
 @media screen and (max-width:640px) {
             /*브라우저 넓이 640px 이하에서만 실행*/
+            body, html {
+                font-size: 14px;
+                background-color: antiquewhite;
+            }
             .wrapper {
                 width: auto; /*원래대로-block요소(감싸는 요소의 넓이의 100%)
                                 100%주면 margin과 충돌*/
