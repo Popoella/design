@@ -1,0 +1,118 @@
+@import url(default.css); 
+@import url(font.css);
+@import url(common.css);
+
+.visual {
+    margin: 100px 0;
+}
+.visual .popup .item {
+    height: 800px;
+    position: relative;
+}
+.visual .popup .item .photo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.visual .popup .item .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.visual .popup .item .visual_txt {
+    margin: 329px 0 0 0;
+    color: #fff;
+}
+.visual .popup .item .visual_txt h3 {
+    font-size: 55px;
+    font-weight: 800;
+    margin: 0 0 5px 0;
+}
+.visual .popup .slick_prev {
+    left: 1%;
+}
+.visual .popup .slick_prev,
+.visual .popup .slick_next {
+    z-index: 10;
+    top: 342px;
+    width: 80px;
+    height: 80px;
+    transform: translate(0, 0);
+}
+.visual .popup .slick_prev::before,
+.visual .popup .slick_next::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.7716 25.0527C21.1155 25.0527 20.5538 24.8149 20.0865 24.3393C19.6193 23.8637 19.3857 23.292 19.3857 22.6242V10.4813C19.3857 9.81345 19.6193 9.24172 20.0865 8.76613C20.5538 8.29053 21.1155 8.05273 21.7716 8.05273C22.4278 8.05273 22.9895 8.29053 23.4567 8.76613C23.924 9.24172 24.1576 9.81345 24.1576 10.4813V22.6242C24.1576 23.292 23.924 23.8637 23.4567 24.3393C22.9895 24.8149 22.4278 25.0527 21.7716 25.0527ZM12.2278 25.0527C11.5716 25.0527 11.0099 24.8149 10.5427 24.3393C10.0754 23.8637 9.8418 23.292 9.8418 22.6242V10.4813C9.8418 9.81345 10.0754 9.24172 10.5427 8.76613C11.0099 8.29053 11.5716 8.05273 12.2278 8.05273C12.8839 8.05273 13.4456 8.29053 13.9128 8.76613C14.3801 9.24172 14.6137 9.81345 14.6137 10.4813V22.6242C14.6137 23.292 14.3801 23.8637 13.9128 24.3393C13.4456 24.8149 12.8839 25.0527 12.2278 25.0527Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.visual .popup .slick_next::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='83' height='83' viewBox='0 0 83 83' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M27.7538 76.0834L21.6152 69.9449L50.06 41.5001L21.6152 13.0553L27.7538 6.91675L62.3371 41.5001L27.7538 76.0834Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+
+.visual .popup .slick-dots {
+    bottom: 43px;
+    left: calc(50% - 46px);
+    z-index: 10;
+    width: auto;
+    display: flex;
+    gap: 5px;
+}
+.visual .popup .slick-dots li {
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+.visual .popup .slick-dots li button {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.visual .popup .slick-dots li button::before {
+    display: none;
+}
+.visual .popup .slick-dots li.slick-active button {
+    background-color: #fff;
+}
+.visual .btn_wrap {
+    position: absolute;
+    left: calc(50% + 30px);
+    bottom: 41px;
+}
+.visual .btn_wrap .stop {
+    
+}
+.visual .btn_wrap .stop,
+.visual .btn_wrap .play {
+    font-size: 0;
+    line-height: 0;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    margin: 0 0 0 13px;
+}
+.visual .btn_wrap .stop::before,
+.visual .btn_wrap .play::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.7716 25.0527C21.1155 25.0527 20.5538 24.8149 20.0865 24.3393C19.6193 23.8637 19.3857 23.292 19.3857 22.6242V10.4813C19.3857 9.81345 19.6193 9.24172 20.0865 8.76613C20.5538 8.29053 21.1155 8.05273 21.7716 8.05273C22.4278 8.05273 22.9895 8.29053 23.4567 8.76613C23.924 9.24172 24.1576 9.81345 24.1576 10.4813V22.6242C24.1576 23.292 23.924 23.8637 23.4567 24.3393C22.9895 24.8149 22.4278 25.0527 21.7716 25.0527ZM12.2278 25.0527C11.5716 25.0527 11.0099 24.8149 10.5427 24.3393C10.0754 23.8637 9.8418 23.292 9.8418 22.6242V10.4813C9.8418 9.81345 10.0754 9.24172 10.5427 8.76613C11.0099 8.29053 11.5716 8.05273 12.2278 8.05273C12.8839 8.05273 13.4456 8.29053 13.9128 8.76613C14.3801 9.24172 14.6137 9.81345 14.6137 10.4813V22.6242C14.6137 23.292 14.3801 23.8637 13.9128 24.3393C13.4456 24.8149 12.8839 25.0527 12.2278 25.0527Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
