@@ -1,3 +1,224 @@
 @import url(default.css); 
 @import url(font.css);
 @import url(common.css);
+
+.news {
+    margin: 100px 0;
+}
+.news .wrapper {
+    position: relative;
+}
+.news .tab_list ul {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+/* .news .tab_list ul li[data-panel="news1"] {
+    background-color: red;
+} */
+.news .tab_list ul li button {
+    padding: 16px 49px 17px 49px;
+    font-size: 30px;
+    position: relative;
+}
+.news .tab_list ul li.active button {
+    color: #075E90;
+    font-weight: 700;
+}
+.news .tab_list ul li.active button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #075E90;
+}
+.news .tab_contents {
+    margin: 49px 0 0 0;
+    padding: 54px 37px;
+    background-color: #f4f4f4;
+}
+.news .tab_contents .tab_pannel {
+    display: none;
+}
+.news .tab_contents .tab_pannel.active {
+    display: block;
+}
+.news .tab_contents .tab_pannel h3 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 0 0 14px 0;
+}
+.news .tab_contents .tab_pannel .more {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.news .tab_contents .tab_pannel .more a {
+    display: block;
+    background-color: #f4f4f4;
+    padding: 20px 57px 20px 21px;
+}
+.news .tab_contents .tab_pannel .more a::after {
+    content: "";
+    position: absolute;
+    right: 16px;
+    top: 17px;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z' fill='%231D1D1D'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+@media screen and (max-width:640px) {
+                .news .tab_list ul li button {
+                    padding: 14px 18px;
+                    font-size: 20px;
+                }
+                .news .tab_contents {
+                    padding: 20px 15px;
+                }
+                .news .tab_contents .tab_pannel h3 {
+                    font-size: 17px;
+                    margin: 0 0 7px 0;
+                }
+                .news .tab_contents .tab_pannel .more {
+                    top: 34px;
+                }
+                .news .tab_contents .tab_pannel .more a {
+                    padding: 0;
+                    width: 24px;
+                    height: 24px;
+                    font-size: 0;
+                    line-height: 0;
+                    background-color: transparent;
+                }
+}
+.notice {
+    margin: 100px 0;
+}
+.notice .list ul {
+    display: flex;
+    position: relative;
+    height: 560px;
+}
+.notice .list ul li {
+    width: calc(33.33% - 64px); /*옆에 더보기 192px 100%에서 190px 빼서 3등분
+                100% / li의 갯수 = 33.33%
+                190 / li의 갯수 = 64px*/
+}
+.notice .list ul li button {
+    display: block;
+    width: 100%;
+    height: 70px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-left-width: 0;
+    font-size: 25px;
+}
+.notice .list ul li:first-child button {
+    border-left-width: 1px;
+    border-top-left-radius: 30px;
+}
+.notice .list ul li.active button {
+    background-color: #fff;
+    color: #1d1d1d;
+    font-weight: 700;
+    border-bottom-width: 0;
+}
+.notice .list ul li .tab_contents {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 70px;
+    border: 1px solid #ccc;
+    border-top-width: 0;
+    border-radius: 0 0 20px 20px;
+ }
+.notice .list ul li .tab_contents .inner {
+    padding: 40px 25px;
+}
+.notice .list ul li .tab_contents h3 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 0 0 10px 0;
+}
+
+.notice .list ul li .tab_contents .more {
+    position: absolute; /*tab_contents를 기준으로 정렬*/
+    right: 0;
+    top: -70px;
+}
+.notice .list ul li .tab_contents .more a {
+    display: block;
+    width: 192px;
+    height: 70px;
+    color: #fff;
+    background-color: #075E90;
+    border-top-right-radius: 30px;
+    padding: 25px 0 0 28px;
+}
+.notice .list ul li .tab_contents .more a::after {
+    content: "";
+    position: absolute;
+    right: 25px;
+    top: 27px;
+    width: 18px;
+    height: 18px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.notice .list ul li.active .tab_contents {
+    display: block;
+} 
+@media screen and (max-width:640px){
+                .notice .list ul {
+                    height: 560px;
+                }
+                .notice .list ul li {
+                    width: calc(33.33% - 14px); /*옆에 더보기 192px 100%에서 190px 빼서 3등분
+                                100% / li의 갯수 = 33.33%
+                                190 / li의 갯수 = 64px*/
+                }
+                .notice .list ul li button {
+                    height: 43px;
+                    font-size: 15px;
+                }
+                .notice .list ul li:first-child button {
+                    border-top-left-radius: 10px;
+                }
+                .notice .list ul li .tab_contents {
+                    top: 43px;
+                    border-radius: 0 0 10px 10px;
+                    padding: 20px 15px;
+                }
+                .notice .list ul li .tab_contents h3 {
+                    font-size: 20px;
+                }
+                .notice .list ul li .tab_contents .more {
+                    top: -43px;
+                }
+                .notice .list ul li .tab_contents .more a {
+                    width: 42px;
+                    height: 43px;
+                    border-top-right-radius: 10px;
+                    padding: 0;
+                    font-size: 0;
+                    line-height: 0;
+                }
+                .notice .list ul li .tab_contents .more a::after {
+                    right: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-size: 18px;
+                }
+                .notice .list ul li.active .tab_contents {
+                    display: block;
+                } 
+}
