@@ -21,7 +21,7 @@
             모바일에서 메뉴를 열었을 때: menu_mo
             검색을 클릭했을 때(pc/모바일 공통): sch_open
         -->
-        <header class="fixed sch_open">
+        <header>
             <h1 class="logo"><a href="index.html">PETcare</a></h1>
             <nav class="gnb">
                 <button class="gnb_open">메뉴 열기</button>
@@ -74,10 +74,12 @@
                         <div class="search_area">
                             <form>
                                 <fieldset>
-                                    <legend>검색</legend>
-                                    <label for="keyword">검색어입력</label>
-                                    <input type="text" id="keyword">
-                                    <input type="submit">
+                                    <div class="inner">
+                                        <legend>검색</legend>
+                                        <label for="keyword">검색어입력</label>
+                                        <input type="text" id="keyword" class="keyword">
+                                        <input type="submit" class="btn">
+                                    </div>
                                 </fieldset>
                             </form>
                         </div>
@@ -107,9 +109,8 @@
                             <div class="visual_txt">
                                 <div class="wrapper">
                                     <h3>
-                                        반려동물,<br>
-                                        사랑으로 입양하세요.<br>
-                                        여러분의 삶이 행복해집니다.
+                                        강아지,<br>
+                                        귀엽습니다.
                                     </h3>
                                 </div>
                             </div>
@@ -119,9 +120,8 @@
                             <div class="visual_txt">
                                 <div class="wrapper">
                                     <h3>
-                                        반려동물,<br>
-                                        사랑으로 입양하세요.<br>
-                                        여러분의 삶이 행복해집니다.
+                                        고양이,<br>
+                                        귀엽습니다.
                                     </h3>
                                 </div>
                             </div>
