@@ -114,20 +114,34 @@ header.fixed .logo a::before {
                     line-height: 40px;
                     white-space: nowrap;
                     text-align: center;
-                    
                 }
                 header .gnb .gnb_wrap ul.depth2 > li > a:hover {
                     font-weight: 700;
                 }
                 header .gnb .gnb_wrap ul.depth2 > li > a span {
                     position: relative;
+                    display: inline-block
+                }
+                header .gnb .gnb_wrap ul.depth2 > li > a[target="_blank"] span {
+                    padding-right: 24px;
+                    position: relative;
+                }
+                header .gnb .gnb_wrap ul.depth2 > li > a[target="_blank"] span::before {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    top: 8px;
+                    width: 22px;
+                    height: 22px;
+                    background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.66667 14.6001C1.20833 14.6001 0.815972 14.4413 0.489583 14.1236C0.163194 13.8059 0 13.424 0 12.9779V1.62224C0 1.17612 0.163194 0.794221 0.489583 0.476532C0.815972 0.158844 1.20833 0 1.66667 0H6.66667C6.90278 0 7.10069 0.0777323 7.26042 0.233197C7.42014 0.388661 7.5 0.581302 7.5 0.811119C7.5 1.04094 7.42014 1.23358 7.26042 1.38904C7.10069 1.54451 6.90278 1.62224 6.66667 1.62224H1.66667V12.9779H13.3333V8.11119C13.3333 7.88137 13.4132 7.68873 13.5729 7.53327C13.7326 7.3778 13.9306 7.30007 14.1667 7.30007C14.4028 7.30007 14.6007 7.3778 14.7604 7.53327C14.9201 7.68873 15 7.88137 15 8.11119V12.9779C15 13.424 14.8368 13.8059 14.5104 14.1236C14.184 14.4413 13.7917 14.6001 13.3333 14.6001H1.66667ZM13.3333 2.75781L6.16667 9.73343C6.01389 9.88213 5.81944 9.95649 5.58333 9.95649C5.34722 9.95649 5.15278 9.88213 5 9.73343C4.84722 9.58472 4.77083 9.39546 4.77083 9.16565C4.77083 8.93583 4.84722 8.74657 5 8.59786L12.1667 1.62224H10C9.76389 1.62224 9.56597 1.54451 9.40625 1.38904C9.24653 1.23358 9.16667 1.04094 9.16667 0.811119C9.16667 0.581302 9.24653 0.388661 9.40625 0.233197C9.56597 0.0777323 9.76389 0 10 0H14.1667C14.4028 0 14.6007 0.0777323 14.7604 0.233197C14.9201 0.388661 15 0.581302 15 0.811119V4.86671C15 5.09653 14.9201 5.28917 14.7604 5.44464C14.6007 5.6001 14.4028 5.67783 14.1667 5.67783C13.9306 5.67783 13.7326 5.6001 13.5729 5.44464C13.4132 5.28917 13.3333 5.09653 13.3333 4.86671V2.75781Z' fill='white'/%3E%3C/svg%3E%0A");
+                    background-repeat: no-repeat;
+                    background-position: center center;
                 }
                 header .gnb .gnb_wrap ul.depth2 > li > a:hover span::after {
                     content: "";
                     position: absolute;
                     right: 0;
                     bottom: 0;
-                    
                 }
                 header .gnb .gnb_wrap ul.depth1 > li.over ul.depth2 {
                     display: block;
@@ -576,9 +590,6 @@ header.fixed .logo a::before {
                     border: 1px solid #1d1d1d;
                     border-radius: 25px;
                 }
-                
-
-                
 }
 
 .visual {
@@ -690,8 +701,314 @@ header.fixed .logo a::before {
             }
 }
 
+.find {
+    background-color: #2d3e50;
+    padding: 140px 0 108px 0;
+    color: #fff;
+}
+.find h2 {
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 26px 0;
+}
+.find .tab_list ul {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+}
+.find .tab_list ul li button {
+    font-size: 25px;
+    padding: 17px 45px;
+    border-radius: 35px;
+    color: rgba(255,255,255,0.8);
+}
+.find .tab_list ul li.active button {
+    background-color: red;
+    color: #fff;
+}
+.find .tab_list ul li.tab02.active button {
+    background-color: #3598db;
+}
+.find .tab_content {
+    margin: 36px 0 0 0;
+}
+.find .tab_content .tab_panel {
+    display: none;
+}
+.find .tab_content .tab_panel.active {
+    display: block;
+}
+.find
+.find .tab_content .tab_panel h3 {
+    display: none;
+}
+.find .tab_content .tab_panel .swiper ul li a {
+    display: block;
+}
+.find .tab_content .tab_panel .swiper ul li a .photo {
+    height: 405px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.find .tab_content .tab_panel .swiper ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.find .tab_content .tab_panel .swiper ul li a h4 {
+    margin: 15px 0;
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    align-items: center;
+    justify-content: space-between;
+}
+.find .tab_content .tab_panel .swiper ul li a h4 strong {
+    padding: 6px 20px 5px 20px;
+    border-radius: 20px;
+}
+.find .tab_content .tab_panel .swiper ul li a h4 strong.cate1 {
+    background-color: red;
+}
+.find .tab_content .tab_panel .swiper ul li a h4 strong.cate2 {
+    background-color: #555;
+}
+.find .tab_content .tab_panel .swiper ul li a h4 strong.cate3 {
+    background-color: #3598db;
+}
+.find .tab_content .tab_panel .swiper ul li a h4 strong.cate4 {
+    background-color: blue;
+}
+.find .tab_content .tab_panel .swiper ul li a h4 span {
+    display: block;
+    width: calc(100% - 87px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.find .tab_content .tab_panel .swiper ul li a ul li {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0 0 0;
+}
+.find .tab_content .tab_panel .swiper ul li a ul li strong {
+    color: rgba(255,255,255,0.8);
+}
+.find .tab_content .tab_panel .swiper ul li a ul li span {
+    display: block;
+    width: calc(100% - 76px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.find .tab_content .tab_panel .btn_wrap {
+    margin: 75px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
+.find .tab_content .tab_panel .btn_wrap button {
+    font-size: 0;
+    line-height: 0;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+.find .tab_content .tab_panel .btn_wrap button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.40871 11.0379L12.3444 13.9734C12.4441 14.0732 12.4952 14.1987 12.4976 14.3498C12.4998 14.5008 12.4488 14.6286 12.3444 14.7331C12.2399 14.8375 12.1133 14.8896 11.9646 14.8896C11.8159 14.8896 11.6893 14.8375 11.5848 14.7331L8.34564 11.494C8.27826 11.4264 8.23069 11.3553 8.20294 11.2804C8.17519 11.2056 8.16132 11.1248 8.16132 11.0379C8.16132 10.9511 8.17519 10.8702 8.20294 10.7954C8.23069 10.7206 8.27826 10.6494 8.34564 10.5819L11.5848 7.34277C11.6846 7.24307 11.81 7.19202 11.9612 7.18961C12.1121 7.18733 12.2399 7.23838 12.3444 7.34277C12.4488 7.44727 12.501 7.57388 12.501 7.72259C12.501 7.8713 12.4488 7.99791 12.3444 8.10241L9.40871 11.0379Z' fill='white'/%3E%3Ccircle cx='10.8109' cy='10.8109' r='10.3109' stroke='white'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.find .tab_content .tab_panel .btn_wrap button.next::before {
+    transform: rotate(180deg);
+}
+.find .tab_content .tab_panel .btn_wrap .more a {
+    display: block;
+    line-height: 30px;
+    height: 30px;
+    padding: 0 35px 0 20px;
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 15px;
+    position: relative; /*before정렬의 기준*/
+}
+.find .tab_content .tab_panel .btn_wrap .more a::before {
+    content: "";
+    position: absolute;
+    right: 14px;
+    top: 6px;
+    width: 16px;
+    height: 15px;
+    background-image: url("data:image/svg+xml,%3Csvg width='17' height='15' viewBox='0 0 17 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.84603 7.96875H4.5127C4.37103 7.96875 4.25231 7.9238 4.15653 7.83391C4.06064 7.74401 4.0127 7.63266 4.0127 7.49984C4.0127 7.36693 4.06064 7.25562 4.15653 7.16594C4.25231 7.07615 4.37103 7.03125 4.5127 7.03125H7.84603V3.90625C7.84603 3.77344 7.89397 3.66214 7.98986 3.57234C8.08575 3.48245 8.20453 3.4375 8.3462 3.4375C8.48797 3.4375 8.6067 3.48245 8.70236 3.57234C8.79814 3.66214 8.84603 3.77344 8.84603 3.90625V7.03125H12.1794C12.321 7.03125 12.4398 7.0762 12.5355 7.16609C12.6314 7.25599 12.6794 7.36734 12.6794 7.50016C12.6794 7.63307 12.6314 7.74438 12.5355 7.83406C12.4398 7.92385 12.321 7.96875 12.1794 7.96875H8.84603V11.0938C8.84603 11.2266 8.79808 11.3379 8.7022 11.4277C8.60631 11.5176 8.48753 11.5625 8.34586 11.5625C8.20408 11.5625 8.08536 11.5176 7.9897 11.4277C7.89392 11.3379 7.84603 11.2266 7.84603 11.0938V7.96875Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+/**********오버스타일***********/
+.find .tab_content .tab_panel .btn_wrap button:hover {
+    background-color: #fff;
+}
+.find .tab_content .tab_panel .btn_wrap button:hover::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.40871 11.0379L12.3444 13.9734C12.4441 14.0732 12.4952 14.1987 12.4976 14.3498C12.4998 14.5008 12.4488 14.6286 12.3444 14.7331C12.2399 14.8375 12.1133 14.8896 11.9646 14.8896C11.8159 14.8896 11.6893 14.8375 11.5848 14.7331L8.34564 11.494C8.27826 11.4264 8.23069 11.3553 8.20294 11.2804C8.17519 11.2056 8.16132 11.1248 8.16132 11.0379C8.16132 10.9511 8.17519 10.8702 8.20294 10.7954C8.23069 10.7206 8.27826 10.6494 8.34564 10.5819L11.5848 7.34277C11.6846 7.24307 11.81 7.19202 11.9612 7.18961C12.1121 7.18733 12.2399 7.23838 12.3444 7.34277C12.4488 7.44727 12.501 7.57388 12.501 7.72259C12.501 7.8713 12.4488 7.99791 12.3444 8.10241L9.40871 11.0379Z' fill='white'/%3E%3Ccircle cx='10.8109' cy='10.8109' r='10.3109' stroke='%232d3e50'/%3E%3C/svg%3E%0A");
+}
+.find .tab_content .tab_panel .btn_wrap .more a {
+    background-color: #fff;
+    color: #2d3e50;
+}
+.find .tab_content .tab_panel .btn_wrap .more a::before{
+    background-image: url("data:image/svg+xml,%3Csvg width='17' height='15' viewBox='0 0 17 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.84603 7.96875H4.5127C4.37103 7.96875 4.25231 7.9238 4.15653 7.83391C4.06064 7.74401 4.0127 7.63266 4.0127 7.49984C4.0127 7.36693 4.06064 7.25562 4.15653 7.16594C4.25231 7.07615 4.37103 7.03125 4.5127 7.03125H7.84603V3.90625C7.84603 3.77344 7.89397 3.66214 7.98986 3.57234C8.08575 3.48245 8.20453 3.4375 8.3462 3.4375C8.48797 3.4375 8.6067 3.48245 8.70236 3.57234C8.79814 3.66214 8.84603 3.77344 8.84603 3.90625V7.03125H12.1794C12.321 7.03125 12.4398 7.0762 12.5355 7.16609C12.6314 7.25599 12.6794 7.36734 12.6794 7.50016C12.6794 7.63307 12.6314 7.74438 12.5355 7.83406C12.4398 7.92385 12.321 7.96875 12.1794 7.96875H8.84603V11.0938C8.84603 11.2266 8.79808 11.3379 8.7022 11.4277C8.60631 11.5176 8.48753 11.5625 8.34586 11.5625C8.20408 11.5625 8.08536 11.5176 7.9897 11.4277C7.89392 11.3379 7.84603 11.2266 7.84603 11.0938V7.96875Z' fill='%232d3e50'/%3E%3C/svg%3E%0A");
+}
+.find .tab_content .tab_panel .swiper ul li a:hover .photo img {
+    transform: scale3d(1.2,1.2,1);
+}
 
+@media screen and (max-width:640px) {
+                .find {
+                    padding: 86px 0 108px 0;
+                }
+                .find h2 {
+                    font-size: 30px;
+                    margin: 0 0 23px 0;
+                }
+                .find .tab_list ul {
+                    gap: 10px;
+                }
+                .find .tab_list ul li button {
+                    padding: 10px 25px;
+                }
+                .find .tab_content {
+                    margin: 25px 0 0 0;
+                }
+                .find .tab_content .tab_panel .swiper ul li {
+                    width: 200px;
+                }
+                .find .tab_content .tab_panel .swiper ul li a .photo {
+                    height: 240px;
+                    border-radius: 10px;
+                }
+                .find .tab_content .tab_panel .swiper ul li a h4 {
+                    margin: 12px 0 10px 0;
+                    font-size: 17px;
+                }
+                .find .tab_content .tab_panel .swiper ul li a h4 strong {
+                    padding: 3px 16px 2px 16px;
+                }
+                .find .tab_content .tab_panel .swiper ul li a h4 span {
+                    width: calc(100% - 74px);
+                }
+                .find .tab_content .tab_panel .swiper ul li a ul li {
+                    margin: 3px 0 0 0;
+                }
+                .find .tab_content .tab_panel .swiper ul li a ul li span {
+                    display: block;
+                    width: calc(100% - 76px);
+                }
+                .find .tab_content .tab_panel .btn_wrap {
+                    margin: 60px 0 0 0;
+                }
+                .find .tab_content .tab_panel .btn_wrap button::before {
+                    background-size: 17px;
+                }
+                .find .tab_content .tab_panel .btn_wrap .more a {
+                    line-height: 22px;
+                    height: 22px;
+                    font-size: 13px;
+                    padding: 0 30px 0 15px;
+                }
+                .find .tab_content .tab_panel .btn_wrap .more a::before {
+                    background-size: contain;
+                }
+}
 
+.slogan {
+    padding: 197px 0 198px 0;
+    background-color: #DAE0D2;
+}
+.slogan h2 {
+    display: none;
+}
+.slogan .tit {
+    color: #3d3d3d;
+    font-size: 50px;
+    line-height: 1.6; /*배수*/
+    text-align: center;
+}
+.slogan .tit span {
+    display: inline-block;
+    height: 1em;
+    position: relative;
+}
+.slogan .tit .txt01 {
+    width: 2.8em; /*글자 하나가 들어가는 너비=1em*/
+}
+.slogan .tit .txt02 {
+    width: 2em;
+}
+.slogan .tit .txt03 {
+    width: 2.4em;
+}
+.slogan .tit .txt04 {
+    width: 1.5em;
+}
+.slogan .tit span::before {
+    content: "";
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    width: 100%;
+    background-position: bottom top;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.slogan .tit span.txt01::before {
+    background-image: url(../images/slogan_img1.png);
+    height: 3em;
+    bottom: -0.7em;
+    left: -0.1em;
+}
+.slogan .tit span.txt02::before {
+    background-image: url(../images/slogan_img2.png);
+    height: 2em;
+    bottom: -0.7em;
+}
+.slogan .tit span.txt03::before {
+    background-image: url(../images/slogan_img3.png);
+    height: 2.5em;
+    bottom: -1em;
+}
+.slogan .tit span.txt04::before {
+    background-image: url(../images/slogan_img4.png);
+    height: 1.5em;
+    bottom: -0.5em;
+}
+.slogan .sub_txt {
+    color: #8e8e8e;
+    text-align: center;
+    margin: 27px 0 0 0;
+    font-size: 15px;
+}
+
+@media screen and (max-width:640px) {
+                .slogan {
+                    padding: 98px 0 82px 0;
+                }
+                .slogan .tit {
+                    font-size: 25px;
+                }
+                .slogan br {
+                    display: none;
+                }
+                .slogan .sub_txt {
+                    display: none;
+                }
+}
 
 footer {
     margin-bottom: 1000px;

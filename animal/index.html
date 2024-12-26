@@ -32,14 +32,14 @@
                             꼭 jquery에서 클래스를 추가하는 것으로 구현
                             li:hover로 구현하면 접근성xx-->
                         <li>
-                            <a href="#n"><span>찾습니다</span></a>
+                            <a href="https://www.naver.com/"><span>찾습니다</span></a>
                             <ul class="depth2">
                                 <li><a href="#n"><span>실종신고</span></a></li>
                                 <li><a href="#n"><span>구조정보/목격담</span></a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#n"><span>구조분양</span></a>
+                            <a href="https://www.naver.com/"><span>구조분양</span></a>
                         </li>
                         <li>
                             <a href="#n"><span>네트워크</span></a>
@@ -49,7 +49,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#n"><span>재회성공담</span></a>
+                            <a href="https://www.naver.com/"><span>재회성공담</span></a>
                         </li>
                         <li>
                             <a href="#n"><span>대처방법</span></a>
@@ -133,6 +133,299 @@
                     <button class="next">다음팝업보기</button>
                     <button class="stop">팝업일시정지</button>
                     <button class="play">팝업다시시작</button>
+                </div>
+            </section>
+            <section class="find">
+                <div class="wrapper">
+                    <h2>찾습니다</h2>
+                    <div class="tab_list">
+                        <ul>
+                            <!--tab과 panel 사이에 연결고리가 있어야함 data-tab이 같으면 같은 내용
+                                선택된 tab에는 active 클래스 추가, button에는 title="선택됨" 추가
+                                tab_panel에도 active 클래스 추가-->
+                            <li data-tab="tab01" role="tab" class="active"><button>가족을</button></li>
+                            <li data-tab="tab02" role="tab"><button>주인을</button></li>
+                        </ul>
+                    </div>
+                    <div class="tab_content">
+                        <div data-tab="tab01" role="tab_panel" class="tab_panel panel01 active">
+                            <h3>실종된 동물 찾기</h3>
+                            <div class="swiper">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/tab_01_01.jpg" alt="동물사진"></div>
+                                            <h4><strong class="cate1">실종</strong><span>비숑 프리제 수컷 10살</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2024-12-16</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>부산광역시 금정구 백두한의원</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>부정교합, 왼쪽코가 잘 막힘</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/tab_01_02.jpg" alt="동물사진"></div>
+                                            <h4><strong class="cate2">종료</strong><span>믹스견(말티즈 푸들 혼종) 암컷 7살</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2024-12-18</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>경기도 이천시 마장면 관리에 있는 발트하임펜션 옆</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>덩치크고 뱃살이 축늘어져있습니다.</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/tab_01_03.jpg" alt="동물사진"></div>
+                                            <h4><strong class="cate1">실종</strong><span>조류(사랑앵무 /잉꼬) 암컷 1살미만 </span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2024-12-28</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>서울특별시 서초구 신사역사거리 5번 출구에서 주유소 뒷편</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>	코색깔이 연하고 혀에 검은점이 있습니다.</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/tab_01_04.jpg" alt="동물사진"></div>
+                                            <h4><strong class="cate1">실종</strong><span>진돗개 수컷 7살 </span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2024-11-24</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>경상북도 상주시 속리산휴게소(청주방향) 5km전지점</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>실종당시 사진과 같은 흰색줄무늬옷 입고 있었습니다.</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/tab_01_05.jpg" alt="동물사진"></div>
+                                            <h4><strong class="cate2">종료</strong><span>진돗개 수컷 7살 </span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2024-11-24</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>경상북도 상주시 속리산휴게소(청주방향) 5km전지점</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>실종당시 사진과 같은 흰색줄무늬옷 입고 있었습니다.</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/tab_01_06.jpg" alt="동물사진"></div>
+                                            <h4><strong class="cate2">종료</strong><span>진돗개 수컷 7살 </span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2024-11-24</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>경상북도 상주시 속리산휴게소(청주방향) 5km전지점</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>실종당시 사진과 같은 흰색줄무늬옷 입고 있었습니다.</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="btn_wrap">
+                                    <div class="swiper-pagination"></div>  <!-- 컨트롤 요소는 swiper 안에 배치-->
+                                    <button class="prev">이전팝업</button>
+                                    <button class="next">다음팝업</button>
+                                    <div class="more"><a href="#n">전체보기</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-tab="tab02" role="tab_panel" class="tab_panel panel02">
+                            <h3>동물 구조</h3>
+                            <div class="swiper">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/tab_02_01.jpg" alt="동물사진"></div>
+                                            <h4><strong class="cate3">구조</strong><span>진돗개 수컷 4살</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>목격날짜</strong>
+                                                    <span>2024-12-16</span>
+                                                </li>
+                                                <li>
+                                                    <strong>목격장소</strong>
+                                                    <span>부산광역시 금정구 백두한의원</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>부정교합, 왼쪽코가 잘 막힘</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/tab_02_02.jpg" alt="동물사진"></div>
+                                            <h4><strong class="cate2">종료</strong><span>믹스견(말티즈 푸들 혼종) 암컷 7살</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>목격날짜</strong>
+                                                    <span>2024-12-18</span>
+                                                </li>
+                                                <li>
+                                                    <strong>목격장소</strong>
+                                                    <span>경기도 이천시 마장면 관리에 있는 발트하임펜션 옆</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>덩치크고 뱃살이 축늘어져있습니다.</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/tab_02_03.jpg" alt="동물사진"></div>
+                                            <h4><strong class="cate4">목격</strong><span>래브라도 리트리버 수컷 6살</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>목격날짜</strong>
+                                                    <span>2024-12-28</span>
+                                                </li>
+                                                <li>
+                                                    <strong>목격장소</strong>
+                                                    <span>서울특별시 서초구 신사역사거리 5번 출구에서 주유소 뒷편</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>	코색깔이 연하고 혀에 검은점이 있습니다.</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/tab_02_04.jpg" alt="동물사진"></div>
+                                            <h4><strong class="cate3">구조</strong><span>페르시안 수컷 13살</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>목격날짜</strong>
+                                                    <span>2024-11-24</span>
+                                                </li>
+                                                <li>
+                                                    <strong>목격장소</strong>
+                                                    <span>경상북도 상주시 속리산휴게소(청주방향) 5km전지점</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>실종당시 사진과 같은 흰색줄무늬옷 입고 있었습니다.</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/tab_02_05.jpg" alt="동물사진"></div>
+                                            <h4><strong class="cate2">종료</strong><span>믹스견(말티즈 혼종) 수컷 7살</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>목격날짜</strong>
+                                                    <span>2024-11-24</span>
+                                                </li>
+                                                <li>
+                                                    <strong>목격장소</strong>
+                                                    <span>경상북도 상주시 속리산휴게소(청주방향) 5km전지점</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>실종당시 사진과 같은 흰색줄무늬옷 입고 있었습니다.</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/tab_02_06.jpg" alt="동물사진"></div>
+                                            <h4><strong class="cate4">목격</strong><span>브리티시 쇼트헤어 성별모름 나이모름</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>목격날짜</strong>
+                                                    <span>2024-11-24</span>
+                                                </li>
+                                                <li>
+                                                    <strong>목격장소</strong>
+                                                    <span>경상북도 상주시 속리산휴게소(청주방향) 5km전지점</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>실종당시 사진과 같은 흰색줄무늬옷 입고 있었습니다.</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="btn_wrap">
+                                    <div class="swiper-pagination"></div>  <!-- 컨트롤 요소는 swiper 안에 배치-->
+                                    <button class="prev">이전팝업</button>
+                                    <button class="next">다음팝업</button>
+                                    <div class="more"><a href="#n">전체보기</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="slogan">
+                <div class="wrapper">
+                    <h2>구조가 필요한 동물 발견 시 대처 요령</h2>
+                    <p class="tit">공공장소<span class="txt01"></span>에서 주인 없이 떠도는<br> 
+                        동물<span class="txt02"></span>을 발견한 경우<br> 
+                        관할 시군구청 또는 동물보호센터<span class="txt03"></span>에<br> 
+                        신고<span class="txt04"></span>하시기 바랍니다.</p>
+                    <p class="sub_txt">※ 소유자를 알 수 없는 동물을 신고하지 않고 알선·구매하는 경우, 포획하여 팔거나 판매하거나 죽일 목적으로 포획하는 경우에는<br> 
+                        동물보호법 제10조제3항제1호·제3호·제4호를 위반하여 2년 이하 징역이나 2천만원 이하 벌금이 부과됩니다.</p>
                 </div>
             </section>
         </main>
