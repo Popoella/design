@@ -50,12 +50,18 @@ $(document).ready(function(){
         $('.biz.list').removeClassClass('over')
     })
 
+    
+    });
+
+
+    /****************biz에 마우스를 오버했을 때(종료)****************/
+    /****************news의 swiper(시작)**************/
     const news_swiper = new Swiper('.news .list .swiper', { /* 팝업을 감싼는 요소의 class명 */
-        slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+        slidesPerView: auto, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
         spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
         breakpoints: {
-            768: {    /* 640px 이상일때 적용 */
-                slidesPerView: 4,
+            1001: {    /* 640px 이상일때 적용 */
+                slidesPerView: 3,
                 spaceBetween: 24,
             }
         },
@@ -66,8 +72,5 @@ $(document).ready(function(){
             draggable: true,
             dragSize: 120,
         },
-    });
-
-
-    /****************biz에 마우스를 오버했을 때(종료)****************/
+    /****************news의 swiper(종료)**************/
 })//$(document).ready
