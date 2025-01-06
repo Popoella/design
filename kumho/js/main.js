@@ -33,4 +33,41 @@ $(document).ready(function(){
         $(this).hide()
         $('.visual .ctrl_wrap button.stop').show()
     })
+
+    /****************biz에 마우스를 오버했을 때(시작)***************
+     * .biz .list ul li에 마우스를 올렸을 때
+     * 마우스를 올린 li에만 active 클래스 추가
+     * .biz .list에 over 클래스 추기
+    */
+
+    $('.biz .list ul li').on('mouseenter', function(){
+        $('.biz .list ul li').removeClass('active')
+        $(this).addClass('active')
+        $('.biz.list').addClass('over')
+    })
+    $('.biz .list').on('mouseleave', function(){
+        $('.biz .list ul li').removeClass('active')
+        $('.biz.list').removeClassClass('over')
+    })
+
+    const news_swiper = new Swiper('.news .list .swiper', { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+        spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+        breakpoints: {
+            768: {    /* 640px 이상일때 적용 */
+                slidesPerView: 4,
+                spaceBetween: 24,
+            }
+        },
+        loop: false,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+        scrollbar: {
+            el: ".news .list .ctrl_wrap .scroll",
+            hide: false,
+            draggable: true,
+            dragSize: 120,
+        },
+    });
+
+
+    /****************biz에 마우스를 오버했을 때(종료)****************/
 })//$(document).ready

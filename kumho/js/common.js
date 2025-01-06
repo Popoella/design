@@ -116,16 +116,25 @@ $(document).ready(function(){
     $('header .gnb .gnb_wrap ul.depth1 > li > a').on('click', function(e){
         if(device_status == 'mobile'){
             e.preventDefault();
-            if($(this).parent().hasClass('open') == true){ //open 클래스를 가지고 있으면
+            if($(this).parent().hasClass('open') == true){ //open클래스를 가지고 있으면 닫아야함
                 //console.log('open있음')
                 $(this).parent().removeClass('open')
                 //$(this).next().slideUp()
-            }else{
+                $(this).next().slideUp()
+                /*
+                
+                <a></a> -------------------------- $(this)
+                <ul class="depth2"></ul> --------- .next 
+                
+                */
+            }else{ //open클래스를 가지고 있지 않으면 열어야 함
                 //console.log('open없음')
-                $('header .gnb .gnb_wrap ul.depth1 > li > a').removeClass('open')
+                $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('open')
+                $('header .gnb .gnb_wrap ul.depth1 > li ul.depth2').slideUp()
                 //console.log('작동')
                 $(this).parent().addClass('open')
                 //$(this).next().slideDown()
+                $(this).next().slideDown()
             }
             //console.log('클릭함')
         }

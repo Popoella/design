@@ -255,7 +255,9 @@ header.fixed .logo a::before, header.menu_pc .logo a::before {
                     background-color: #fff;
                 }
                 header.menu_pc .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
-                    display: block; /* 나타남 */
+                    display: block !important; /* 나타남 */
+                    /*2차메뉴를 모바일에서 jquery로 slide 효과를 줘서 style="display:none;이라고
+                    써놓는 경우 */
                 }
 }/* media */
 @media screen and (max-width:1000px){
@@ -322,14 +324,13 @@ header.fixed .logo a::before, header.menu_pc .logo a::before {
                     padding-right: 1.75em;
                 }
                 header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
-                    /*display: none;*/
-                    overflow: hidden;
-                    height: 0;
-                    background-color: #ed1c24;
+                    display: none;
+                    /*overflow: hidden;
+                    height: 0;*/
+                    background-color: var(--main-color);
                     color: #fff;
                     font-size: 1.2143rem;
-                    /*padding: 1.4706em;*/
-                    transition: height 0.5s;
+                    padding: 1.4706em 0 1.4706em 1.1765em;
                 }
                 header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li > a {
                     display: block;
@@ -345,7 +346,7 @@ header.fixed .logo a::before, header.menu_pc .logo a::before {
                 }
                 header .gnb .gnb_wrap ul.depth1 > li.open > ul.depth2 {
                     /*display: block;*/
-                    height: 200px;
+                    /*height: 200px;*/
                 }
                 header .gnb .gnb_wrap ul.depth1 > li.open > a::after {
                     background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 10.4539L7.927 14.5271C7.7885 14.6655 7.61441 14.7363 7.40475 14.7396C7.19525 14.7428 7.018 14.672 6.873 14.5271C6.72816 14.3821 6.65575 14.2065 6.65575 14.0001C6.65575 13.7938 6.72816 13.6181 6.873 13.4731L11.3672 8.97889C11.4609 8.88539 11.5597 8.81939 11.6635 8.78089C11.7673 8.74239 11.8795 8.72314 12 8.72314C12.1205 8.72314 12.2327 8.74239 12.3365 8.78089C12.4403 8.81939 12.5391 8.88539 12.6327 8.97889L17.127 13.4731C17.2653 13.6116 17.3362 13.7857 17.3395 13.9954C17.3427 14.2049 17.2718 14.3821 17.127 14.5271C16.982 14.672 16.8063 14.7444 16.6 14.7444C16.3937 14.7444 16.218 14.672 16.073 14.5271L12 10.4539Z' fill='%23ED1C24'/%3E%3C/svg%3E%0A");
