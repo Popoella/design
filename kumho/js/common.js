@@ -157,5 +157,32 @@ $(document).ready(function(){
 
     /*****************모바일 메뉴 열고 닫기 (종료)*******************/
 
+    $('footer .top button').on('click', function(){
+        //console.log('작동')
+        $('html, body').animate({
+            scrollTop: 0, 
+        }, 500)//스크롤 0 변경
+    })
+
+    /******************famaily_site 클릭해서 열기 (시작)*****************
+     * footer .family_site button 클릭했을 때
+     * footer .family_site 에 open 클래스 추가
+     * button에 title 문구 변경
+     * footer .family_site .list 열고 닫기 slideUp slideDown
+     * 현재 버튼이 열려있는지 닫혀 있는지 구분 >> open 클래스 존재 유무로
+    */
+    
+    $('footer .family_site button').on('click', function(){
+        if($(this).parent().hasClass('open') == true){ //open클래스가 있을 때(닫아야 함)
+            $(this).parent().removeClass('open')
+            $(this).next().slideUp
+            $(this).attr('title', '열기버튼')
+        }else{ //open클래스가 없을 때(열어야 함)
+            $(this).parent().addClass('open')
+            $(this).next().slideDown
+            $(this).attr('title', '닫기버튼')
+        }
+    })
+
 })//$(document).ready
     
