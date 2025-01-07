@@ -9,13 +9,13 @@
 @import url(contents.css); 
 @import url(layout.css); 
 
-.header .gnb .gnb_wrap ul.depth1 > li.active > a {
+header .gnb .gnb_wrap ul.depth1 > li.active > a {
     position: relative;
 }
-.header .gnb .gnb_wrap ul.depth1 > li.active > a > span {
+header .gnb .gnb_wrap ul.depth1 > li.active > a > span {
     position: relative;
 }
-.header .gnb .gnb_wrap ul.depth1 > li.active > ul.depth2 > li.active > a {
+header .gnb .gnb_wrap ul.depth1 > li.active > ul.depth2 > li.active > a {
     content: "";
     position: absolute;
     left: 0;
@@ -24,8 +24,24 @@
     height: 5px;
     background-color: var(--main-color);
 }
-.header .gnb .gnb_wrap ul.depth1 > li.active.over > ul.depth2 > li.active > a {
+header .gnb .gnb_wrap ul.depth1 > li.active.over > ul.depth2 > li.active > a {
     color: #fff;
+}
+@media screen and (max-width:1000px) {
+    header .gnb .gnb_wrap ul.depth1 > li.active > a {
+        color: var(--main-color);
+        font-weight: 700;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li.active > a::after {
+        transform: rotate(180deg);
+    }
+    header .gnb .gnb_wrap ul.depth1 > li.active ul.depth2 {
+        display: block;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li.active > ul.depth2 > li.active > a {
+        font-weight: 700;
+        text-decoration: underline;
+    }
 }
 
 .sub_visual {
